@@ -1,6 +1,6 @@
 # Parsing JSON Review
 
-Parsing JSON review. Using Playgrounds. Using Unit Tests and displaying in a table view.
+Parsing JSON review. In this review we will be using Playgrounds, using Unit Tests, reading from the App Bundle and displaying the JSON data in a table view.
 
 ## Objective
 
