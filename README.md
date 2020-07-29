@@ -366,7 +366,35 @@ dump(dictionary.results)
 */
 ```
 
-## 3. Parsing JSON using a unit test 
+## 3. Parsing JSON from the App `Bundle`
+
+```swift 
+extension Bundle {
+  enum BundleError: Error {
+    case noResource(String)
+    case noContents(String)
+    case decodingError(Error)
+  }
+  
+  func parseJSONData<T: Decodable>(_ name: String, ext: String = "json") throws -> T {
+    guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
+      throw BundleError.noResource(name)
+    }
+    guard let data = FileManager.default.contents(atPath: path) else {
+      throw BundleError.noContents(path)
+    }
+    var elements: T
+    do {
+      elements = try JSONDecoder().decode(T.self, from: data)
+    } catch {
+      throw BundleError.decodingError(error)
+    }
+    return elements
+  }
+}
+```
+
+## 4. Parsing JSON using a unit test 
 
 ```swift 
 func testCreatePodcastModel() {
@@ -438,34 +466,6 @@ func testCreatePodcastModel() {
     XCTAssertEqual(expectedCollectionName, dictionary.results.first?.collectionName, "should be equal to \(expectedCollectionName)")
   } catch {
     XCTFail("decoding error: \(error)")
-  }
-}
-```
-
-## 4. Parsing JSON from the App `Bundle`
-
-```swift 
-extension Bundle {
-  enum BundleError: Error {
-    case noResource(String)
-    case noContents(String)
-    case decodingError(Error)
-  }
-  
-  func parseJSONData<T: Decodable>(_ name: String, ext: String = "json") throws -> T {
-    guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
-      throw BundleError.noResource(name)
-    }
-    guard let data = FileManager.default.contents(atPath: path) else {
-      throw BundleError.noContents(path)
-    }
-    var elements: T
-    do {
-      elements = try JSONDecoder().decode(T.self, from: data)
-    } catch {
-      throw BundleError.decodingError(error)
-    }
-    return elements
   }
 }
 ```
