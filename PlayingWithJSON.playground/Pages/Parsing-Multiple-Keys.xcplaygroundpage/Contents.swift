@@ -1,5 +1,9 @@
 import Foundation
 
+//===================================================
+// JSON data
+//===================================================
+
 let json = """
 {
   "Afpak": {
@@ -93,7 +97,9 @@ let json = """
 """.data(using: .utf8)!
 
 
-// models
+//===================================================
+// Swift Model(s)
+//===================================================
 
 struct Strain: Decodable {
   let id: Int
@@ -102,7 +108,11 @@ struct Strain: Decodable {
   let effects: [String: [String]]
 }
 
+
+//===================================================
 // decode JSON to Swift objects
+//===================================================
+
 do {
   let dictionary = try JSONDecoder().decode([String: Strain].self, from: json)
   // use a for-loop to create [Strain] or use map {}
@@ -118,4 +128,3 @@ do {
 } catch {
   print(error)
 }
-
