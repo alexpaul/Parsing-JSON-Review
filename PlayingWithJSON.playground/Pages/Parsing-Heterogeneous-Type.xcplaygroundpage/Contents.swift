@@ -200,6 +200,8 @@ do {
     print("postcode is \(stringValue)")
   }
   
+  // postcode is Y5N 0E9
+  
   //dump(people)
 } catch {
   dump(error)
