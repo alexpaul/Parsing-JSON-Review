@@ -13,7 +13,7 @@ Parsing JSON review. Using Playgrounds. Using Unit Tests and displaying in a tab
 
 [JSON](https://www.json.org/json-en.html) - _JavaScript Object Notation_. To review JSON is structured using one of two data structures, it can be structued using an array or a dictionary. 
 
-## JSON examples 
+## 1. JSON examples 
 
 #### Example 1 
 
@@ -323,7 +323,7 @@ Parsing JSON review. Using Playgrounds. Using Unit Tests and displaying in a tab
  ```
 </details> 
 
-## Parsing JSON using Swift Playgrounds 
+## 2. Parsing JSON using Swift Playgrounds 
 
 ```swift 
 let json = """
@@ -366,7 +366,7 @@ dump(dictionary.results)
 */
 ```
 
-## Parsing JSON using a unit test 
+## 3. Parsing JSON using a unit test 
 
 ```swift 
 func testCreatePodcastModel() {
@@ -442,7 +442,7 @@ func testCreatePodcastModel() {
 }
 ```
 
-## Parsing JSON from the App Bundle
+## 4. Parsing JSON from the App `Bundle`
 
 ```swift 
 extension Bundle {
@@ -470,7 +470,7 @@ extension Bundle {
 }
 ```
 
-## Parsing JSON using an Xcode project
+## 5. Parsing JSON using `URLSession`
 
 ```swift 
 enum APIClientError: Error {
@@ -516,7 +516,7 @@ class APIClient<T: Decodable> {
 
 ## Challenge 
 
-Parse the following JSON using Swift Playgrounds: 
+Parse the following JSON and populate the results in a table view. Also include the key e.g `-LG_XMr0arhZYnHJrzmh` as part of your Swift model: 
 
 <details> 
  <summary>JSON data</summary> 
