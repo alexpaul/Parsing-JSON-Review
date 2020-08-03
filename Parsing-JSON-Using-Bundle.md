@@ -207,4 +207,4 @@ class FeedViewController: UIViewController {
 
 ## 7. Table View 
 
-![presidents](https://github.com/alexpaul/JSON-Examples/Assets/presidents.png)
+![presidents](https://github.com/alexpaul/JSON-Examples/blob/master/Assets/presidents.png)
