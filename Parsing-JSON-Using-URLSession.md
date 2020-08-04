@@ -257,10 +257,11 @@ class FeedViewController: UIViewController {
 
 ## 4. Where to go from here? 
 
-1. Use the `lat` and `long` properties of the station to populate a `MapView` detail view. 
-2. Use the `https://gbfs.citibikenyc.com/gbfs/en/station_status.json` endpoint to get real-time bike availability data of a station and show this in a detail view. 
-3. Refactor the `APIClient` to use Combine as opposed to a closure for the asynchronous network call. 
-4. Use persistence to allow a user to favorite stations. 
+1. Refactor the table view to a map view and use the `lat` and `long` properties to identify a station. 
+2. Use the `https://gbfs.citibikenyc.com/gbfs/en/station_status.json` endpoint to get real-time bike availability data of a station and show this in a detail view.
+3. Allow the user to search the map view.
+4. Refactor the `APIClient` to use Combine as opposed to a closure for the asynchronous network call. 
+5. Use persistence to allow a user to favorite stations. 
 6. Make sections by `region_id`. 
 
 
