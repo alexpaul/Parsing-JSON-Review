@@ -202,9 +202,13 @@ class APIClient {
 
 ```swift 
 class FeedViewController: UIViewController {
+  enum Section {
+    case main 
+  }
+  
   @IBOutlet weak var tableView: UITableView!
   
-  typealias DataSource = UITableViewDiffableDataSource<Int, Station>
+  typealias DataSource = UITableViewDiffableDataSource<Section, Station>
   
   private var dataSource: DataSource!
   private let apiClient = APIClient()
@@ -230,7 +234,7 @@ class FeedViewController: UIViewController {
   
   private func updateSnapshot(with countries: [Station]) {
     var snapshot = dataSource.snapshot()
-    snapshot.appendItems(countries, toSection: 0)
+    snapshot.appendItems(countries, toSection: .main)
     dataSource.apply(snapshot, animatingDifferences: true)
   }
   
@@ -243,7 +247,7 @@ class FeedViewController: UIViewController {
     })
     
     var snapshot = NSDiffableDataSourceSnapshot<Int, Station>()
-    snapshot.appendSections([0])
+    snapshot.appendSections([.main])
     dataSource.apply(snapshot, animatingDifferences: false)
   }
 }
