@@ -10,7 +10,7 @@ Since our publisher returns an array of stattions we use map again `.map { $0.da
 
 We handle dispatching back to the main thread in the `APIClient` so the view controller does not have to do this work. 
 
-`.eraseToAnyPublisher` hided the implementation detail from the client code. 
+`.eraseToAnyPublisher` hides the implementation detail from the client code. 
 
 ```swift 
 class APIClient {
