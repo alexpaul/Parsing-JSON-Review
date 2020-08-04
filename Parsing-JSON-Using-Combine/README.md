@@ -2,13 +2,13 @@
 
 ## APIClient 
 
-Here in Combine we have access to `dataTaskPublisher` and `decode()` wrappers which makes our networking code much more functional that using closures. 
+Here in Combine we have access to `dataTaskPublisher` and `decode()` wrappers which makes our networking code much more functional than using closures. 
 
-We use `.map(\.data)` keypath to access the data property from the data task. 
+We use `.map(\.data)` keypath to access the data property from the data task arguments, namely response, data and error. 
 
-Since our publisher returns an array of stattions we use map again to get the stations array. 
+Since our publisher returns an array of stattions we use map again `.map { $0.data.stations }` to get the stations array. 
 
-We handle dispatching back to the main thread in the client so the view controller does not have to do this work. 
+We handle dispatching back to the main thread in the `APIClient` so the view controller does not have to do this work. 
 
 `.eraseToAnyPublisher` hided the implementation detail from the client code. 
 
