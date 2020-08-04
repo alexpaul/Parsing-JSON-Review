@@ -251,4 +251,11 @@ class FeedViewController: UIViewController {
 
 ![citi bike stations](https://github.com/alexpaul/Parsing-JSON-Review/blob/master/Assets/citi-bike-stations.png)
 
+## 4. Where to go from here? 
+
+1. Use the `lat` and `long` properties of the station to populate a `MapView` detail view. 
+2. Use the `https://gbfs.citibikenyc.com/gbfs/en/station_status.json` endpoint to real-time bike availability of a station in a detail view. 
+3. Refactor the APIClient to use Combine as opposed to closures for asynchronous network call. 
+4. Use persistence to allow a user to favorite stations. 
+
 
