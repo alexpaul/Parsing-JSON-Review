@@ -50,3 +50,7 @@ private func fetchData() {
   }
 }
 ```
+
+## More resources on Combine 
+
+1. [Using Combine](https://heckj.github.io/swiftui-notes/#aboutthisbook)
