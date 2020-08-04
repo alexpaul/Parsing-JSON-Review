@@ -6,7 +6,7 @@ Here in Combine we have access to `dataTaskPublisher` and `decode()` wrappers wh
 
 We use `.map(\.data)` keypath to access the data property from the data task arguments, namely response, data and error. 
 
-Since our publisher returns an array of stattions we use map again `.map { $0.data.stations }` to get the stations array. 
+Since our publisher returns an array of stations we use map again `.map { $0.data.stations }` to get the stations array. 
 
 We handle dispatching back to the main thread in the `APIClient` so the view controller does not have to do this work. 
 
