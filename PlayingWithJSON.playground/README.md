@@ -1,5 +1,7 @@
 # Parsing JSON using Swift Playgrounds 
 
+There are four examples in the **Pages** folder of this repo.
+
 ```swift 
 let json = """
 {
