@@ -366,7 +366,7 @@ dump(dictionary.results)
 */
 ```
 
-## 3. Parsing JSON from the App [`Bundle`](https://github.com/alexpaul/Parsing-JSON-Review/blob/master/Parsing-JSON-Using-Bundle.md)
+## 3. Parsing JSON from the App [`Bundle`](https://github.com/alexpaul/Parsing-JSON-Review/tree/master/Parsing-JSON-Using-Bundle)
 
 ```swift 
 extension Bundle {
