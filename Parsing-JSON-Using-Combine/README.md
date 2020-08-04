@@ -61,3 +61,4 @@ private func fetchData() {
 2. [Combine in Practice - WWDC 2019](https://developer.apple.com/videos/play/wwdc2019/721/)
 3. [Using Combine](https://heckj.github.io/swiftui-notes/#aboutthisbook)
 4. [Apple docs - Combine](https://developer.apple.com/documentation/combine)
+5. [Apple docs - Processing URL Session Data Task Results with Combine](https://developer.apple.com/documentation/foundation/urlsession/processing_url_session_data_task_results_with_combine)
