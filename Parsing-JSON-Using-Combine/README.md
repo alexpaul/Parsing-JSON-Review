@@ -33,7 +33,11 @@ class APIClient {
 
 We subscribe to the publisher and use `.sink` to receive the emitted values from the publisher. 
 
+We store our subscribers in the case of the need to cancel a subscription `.store(in: &subscriptions`. 
+
 ```swift 
+private var subscriptions: Set<AnyCancellable> = []
+
 private func fetchData() {
   do {
     let publisher = try apiClient.fetchData()
