@@ -1,4 +1,4 @@
-# Using Combine for making Network Requests
+# Using Combine for making asynchronous network requests
 
 ## APIClient 
 
