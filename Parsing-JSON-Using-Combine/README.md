@@ -53,4 +53,5 @@ private func fetchData() {
 
 ## More resources on Combine 
 
-1. [Using Combine](https://heckj.github.io/swiftui-notes/#aboutthisbook)
+1. [Introducing Combine - WWDC 2019](https://developer.apple.com/videos/play/wwdc2019/722/)
+2. [Using Combine](https://heckj.github.io/swiftui-notes/#aboutthisbook)
