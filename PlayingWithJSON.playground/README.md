@@ -1,6 +1,6 @@
 # Parsing JSON using Swift Playgrounds 
 
-There are four examples in the **Pages** folder of this repo.
+There are four examples in the [Pages](https://github.com/alexpaul/Parsing-JSON-Review/tree/master/PlayingWithJSON.playground/Pages) folder of this repo.
 
 ```swift 
 let json = """
